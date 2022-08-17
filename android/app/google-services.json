@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "1029579063061",
+    "project_id": "bilqom-2894a",
+    "storage_bucket": "bilqom-2894a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029579063061:android:139fcc81e20bd72215331c",
+        "android_client_info": {
+          "package_name": "com.tatbeqakum.bilqomapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029579063061-dt2f1bvhdfjr4v3ps15h4lngnohi46ka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tatbeqakum.bilqomapp",
+            "certificate_hash": "8f30f462bfc6427ffe7e6ec0f674ce5ff1540b86"
+          }
+        },
+        {
+          "client_id": "1029579063061-hmjh5rmitjh4moud0rdul7sq0nbosj14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tatbeqakum.bilqomapp",
+            "certificate_hash": "de04ebc2621b53057b4c9a6ecbeca296bbe1bf28"
+          }
+        },
+        {
+          "client_id": "1029579063061-nsqdfnuvnvlea3lie0887t6c0ab2bmfe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tatbeqakum.bilqomapp",
+            "certificate_hash": "64fcbdbf2d74df19cf8e709cf0d99be66fa25969"
+          }
+        },
+        {
+          "client_id": "1029579063061-f3277ah8e23usr4iibpmtcs65p6uqde2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvWBxpdtBSzS0pMN-LxVIYrwcaV8KhAZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029579063061-f3277ah8e23usr4iibpmtcs65p6uqde2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1029579063061-e4gq76fee34tnsfviso23a7s40mp59sn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tatbeqakum.bilqomapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

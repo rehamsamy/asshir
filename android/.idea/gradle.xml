@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity-3.0.6/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-3.3.10/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.13.1/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_dynamic_links-4.1.0/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-10.0.9/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.5/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_share-2.0.0/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.9/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/geocoding-2.0.4/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator_android-2.1.0/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/google_api_headers-1.1.1/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.2/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.4+11/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/location-4.3.0/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info_plus-1.4.0/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.12/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_android-9.0.2+1/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/share-2.0.4/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.0.11/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-2.0.2/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_android-6.0.15/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_android-2.3.0/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/wakelock-0.5.6/android" />
+            <option value="$USER_HOME$/Downloads/flutter_windows_2.5.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/wc_flutter_share-0.4.0/android" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
