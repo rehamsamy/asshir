@@ -81,6 +81,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
         iconColor: globalColor.black,
       ),
       title: Text(
+
         Translations.of(context).translate('product_details'),
         style: textStyle.middleTSBasic.copyWith(color: globalColor.black),
       ),

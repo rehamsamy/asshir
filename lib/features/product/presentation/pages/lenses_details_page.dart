@@ -116,7 +116,8 @@ class _LensesDetailsPageState extends State<LensesDetailsPage> {
         iconColor: globalColor.black,
       ),
       title: Text(
-        Translations.of(context).translate('product_details'),
+        Translations.of(context).translate('product_details')
+        ,
         style: textStyle.middleTSBasic.copyWith(color: globalColor.black),
       ),
       centerTitle: true,

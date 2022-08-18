@@ -113,6 +113,7 @@ class _LensesDetailsWidgetState extends State<LensesDetailsWidget> {
           ),
           child: Column(
             children: [
+
               _buildTopWidget(
                   context: context,
                   width: width,

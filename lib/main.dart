@@ -46,6 +46,7 @@ final uuid = Uuid();
 final locator = GetIt.instance;
 FirebaseDynamicLinks dynamicLinks = FirebaseDynamicLinks.instance;
 
+
 void setupLocator() {
   // Handle DI stuffs.
   //===================================

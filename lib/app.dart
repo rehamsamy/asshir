@@ -18,6 +18,7 @@ import 'core/bloc/root_page_bloc.dart';
 import 'core/constants.dart';
 import 'core/providers/cart_provider.dart';
 import 'core/res/utils.dart';
+final GlobalKey<NavigatorState> navigator = GlobalKey<NavigatorState>();
 
 class MyApp extends StatelessWidget {
   final String? lang;
@@ -46,6 +47,8 @@ class MyApp extends StatelessWidget {
                 utils.setLang(_lang);
 
                 return GetMaterialApp(
+                  navigatorKey: navigator,
+
                   debugShowCheckedModeBanner: false,
                   title: utils.getLang() == 'ar' ? 'بالكوم' : 'BILQOM',
                   enableLog: true,

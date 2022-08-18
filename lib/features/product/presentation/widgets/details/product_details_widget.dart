@@ -1,5 +1,7 @@
 import 'dart:typed_data';
+import 'package:ojos_app/core/pusher.dart';
 import 'package:ojos_app/core/res/shared_preference_utils/shared_preferences.dart';
+import 'package:ojos_app/features/gallery_preview.dart';
 import 'package:wc_flutter_share/wc_flutter_share.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
@@ -174,30 +176,41 @@ class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
                         scrollDirection: Axis.horizontal,
                         physics: BouncingScrollPhysics(),
                         children: product.photoInfo!
-                            .map((item) => Stack(
-                                  children: [
-                                    Container(
-                                      width: width,
-                                      height: 236.h,
-                                      child: ImageCacheWidget(
-                                        imageUrl: item.image!,
-                                        imageWidth: width,
-                                        imageHeight: 236.h,
-                                        boxFit: BoxFit.fill,
+                            .map((item) => InkWell(
+                                  onTap: () {
+                                    push(GalleryPreviewPage(
+                                        [product.image ?? ""]));
+                                  },
+                                  child: Stack(
+                                    children: [
+                                      Container(
+                                        width: width,
+                                        height: 236.h,
+                                        child: ImageCacheWidget(
+                                          imageUrl: item.image!,
+                                          imageWidth: width,
+                                          imageHeight: 236.h,
+                                          boxFit: BoxFit.fill,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ))
                             .toList(),
                       )
-                    : Container(
-                        width: width,
-                        height: 236.h,
-                        child: ImageCacheWidget(
-                          imageUrl: product.image ?? '',
-                          imageWidth: width,
-                          imageHeight: 236.h,
-                          boxFit: BoxFit.fill,
+                    : InkWell(
+                        onTap: () {
+                          push(GalleryPreviewPage([product.image ?? ""]));
+                        },
+                        child: Container(
+                          width: width,
+                          height: 236.h,
+                          child: ImageCacheWidget(
+                            imageUrl: product.image ?? '',
+                            imageWidth: width,
+                            imageHeight: 236.h,
+                            boxFit: BoxFit.fill,
+                          ),
                         ),
                       ),
                 Positioned(
@@ -261,7 +274,7 @@ class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
                     bottom: 10,
                     child: _buildPageIndicator2(
                         width: width, list: product.photoInfo!))
-                : Container()
+                : Container(),
           ],
         ),
       ),
