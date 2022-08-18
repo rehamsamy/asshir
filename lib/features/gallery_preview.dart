@@ -19,31 +19,36 @@ class _GalleryPreviewPageState extends State<GalleryPreviewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GestureDetector(
-        // onTapDown: ( x) => _getBack(),
         child: Stack(
           children: <Widget>[
             Container(
               child: Swiper(
                 itemBuilder: (context, int index) {
-                  return
-                    PhotoView(
-                    imageProvider:
-                    // widget.images != null
-                    //     ?
-
-                    NetworkImage(
+                  return widget.images[0] == "" || widget.images[0] == null
+                      ? ClipRRect(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey)),
+                            child: const Center(
+                              child: Icon(
+                                Icons.image_not_supported,
+                                color: Colors.grey,
+                                size: 120,
+                              ),
+                            ),
+                          ),
+                        )
+                      : PhotoView(
+                          imageProvider: NetworkImage(
                             widget.images[index],
                           ),
-                    //     :,
-                    // AssetImage(
-                    //         "assets/icons/logo.png",
-                    //       ),
-                    minScale: PhotoViewComputedScale.contained,
-                    filterQuality: FilterQuality.high,
+
+                          minScale: PhotoViewComputedScale.contained,
+                          filterQuality: FilterQuality.high,
 //                    onTapDown: (context, details, controllerValue) =>
 //                        _getBack(),
 //                     enableRotation: true,
-                  );
+                        );
                 },
                 itemCount: widget.images.length,
                 outer: false,
