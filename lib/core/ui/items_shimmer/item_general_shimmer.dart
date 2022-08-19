@@ -43,8 +43,8 @@ class _ItemGeneralShimmerState extends State<ItemGeneralShimmer> {
 
     // Printing Random Number between 1 to 100 on Terminal Window.
     setState(() {
-      randomWidth = next(60, 200);
-      randomWidth2 = next(20, 60);
+      randomWidth = next(60, 90);
+      randomWidth2 = next(80, 120);
       randomWidth3 = next(20, 60);
       randomHeight = next(8, 25);
       randomHeight2 = next(6, 12);
@@ -58,7 +58,23 @@ class _ItemGeneralShimmerState extends State<ItemGeneralShimmer> {
     double heightC =
         widget.height ?? globalSize.setHeightPercentage(60, context);
 
-    return Padding(
+    return
+      // GridView.builder(
+      //   gridDelegate:
+      //       const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      //   physics: BouncingScrollPhysics(),
+      //   itemCount: 10,
+      //   shrinkWrap: true,
+      //   scrollDirection: Axis.vertical,
+      //   itemBuilder: (BuildContext context, int index) {
+      //     return ItemGeneralShimmer(
+      //       height: globalSize.setWidthPercentage(60, context),
+      //       width: globalSize.setWidthPercentage(47, context),
+      //       isFromHome: widget.isFromHome,
+      //     );
+      //   });
+
+    Padding(
       padding: const EdgeInsets.only(top: 1.0),
       child: Container(
         width: widthC,
@@ -72,12 +88,12 @@ class _ItemGeneralShimmerState extends State<ItemGeneralShimmer> {
               height: heightC,
               child: BaseShimmerWidget(
                 child: Container(
-                  margin: const EdgeInsets.all(4),
+                  // margin: const EdgeInsets.all(4),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
-                        flex: 3,
+                        flex: 4,
                         child: Container(
                           height: heightC,
                           decoration: BoxDecoration(
@@ -97,12 +113,11 @@ class _ItemGeneralShimmerState extends State<ItemGeneralShimmer> {
                         child: Container(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
-
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Expanded(
-                                flex: 4,
+                                flex: 2,
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
@@ -111,20 +126,26 @@ class _ItemGeneralShimmerState extends State<ItemGeneralShimmer> {
                                     Expanded(
                                       flex: 2,
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
+                                          SizedBox(
+                                            height: 6,
+                                          ),
                                           Container(
-                                            width: randomWidth!.toDouble()*1.6,
+                                            width: randomWidth!.toDouble() * 1,
                                             height: 14.0,
                                             color: Colors.white,
                                           ),
                                           const Padding(
                                             padding: EdgeInsets.symmetric(
-                                                vertical: 2.0),
+                                                vertical: 6.0),
                                           ),
                                           Container(
-                                            width: randomWidth!.toDouble()*1.4,
+                                            width:
+                                                randomWidth!.toDouble() * 1.4,
                                             height: 14.0,
                                             color: Colors.white,
                                           ),
@@ -146,9 +167,9 @@ class _ItemGeneralShimmerState extends State<ItemGeneralShimmer> {
                                   ],
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsets.symmetric(vertical: 2.0),
-                              ),
+                              // Padding(
+                              //   padding: EdgeInsets.symmetric(vertical: 2.0),
+                              // ),
 
                               // !widget.isFromHome
                               //     ? Expanded(

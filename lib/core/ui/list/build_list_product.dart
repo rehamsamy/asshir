@@ -150,7 +150,9 @@ class _BuildListProductWidgetState extends State<BuildListProductWidget> with Au
         height: globalSize.setWidthPercentage(60, context),
         width: globalSize.setWidthPercentage(47, context),
       );
-    return ItemProductWidget(
+    return
+
+      ItemProductWidget(
       product: product,
       height: globalSize.setWidthPercentage(60, context),
       width: globalSize.setWidthPercentage(47, context),

@@ -27,6 +27,7 @@ import 'package:ojos_app/core/ui/dailog/login_first_dialog.dart';
 import 'package:ojos_app/core/ui/dailog/soon_dailog.dart';
 import 'package:ojos_app/core/ui/items_shimmer/base_shimmer.dart';
 import 'package:ojos_app/core/ui/items_shimmer/home/offer_item_shimmer.dart';
+import 'package:ojos_app/core/ui/items_shimmer/item_general_shimmer.dart';
 import 'package:ojos_app/core/ui/list/build_list_product.dart';
 import 'package:ojos_app/core/ui/widget/title_with_view_all_widget.dart';
 import 'package:ojos_app/features/cart/presentation/pages/cart_page.dart';
@@ -196,9 +197,6 @@ class _HomePageState extends State<HomePage> {
                       child: Container(
                         child: Column(
                           children: [
-
-
-
                             _buildTopAds(
                                 context: context,
                                 width: width,
@@ -214,6 +212,23 @@ class _HomePageState extends State<HomePage> {
                             VerticalPadding(
                               percentage: .5,
                             ),
+                            // GridView.builder(
+                            //     gridDelegate:
+                            //         const SliverGridDelegateWithFixedCrossAxisCount(
+                            //             crossAxisCount: 2),
+                            //     physics: BouncingScrollPhysics(),
+                            //     itemCount: 10,
+                            //     shrinkWrap: true,
+                            //     scrollDirection: Axis.vertical,
+                            //     itemBuilder: (BuildContext context, int index) {
+                            //       return ItemGeneralShimmer(
+                            //         height: globalSize.setWidthPercentage(
+                            //             60, context),
+                            //         width: globalSize.setWidthPercentage(
+                            //             47, context),
+                            //         isFromHome: true,
+                            //       );
+                            //     }),
                             _buildMostSold(
                                 context: context, width: width, height: height),
                             VerticalPadding(
@@ -239,7 +254,10 @@ class _HomePageState extends State<HomePage> {
                             VerticalPadding(
                               percentage: .5,
                             ),
-                            _buildCategoriesHome(context1:context ,width: width, height: height),
+                            _buildCategoriesHome(
+                                context1: context,
+                                width: width,
+                                height: height),
                             _buildBottomAdsTwo(
                                 context: context, width: width, height: height),
                             VerticalPadding(
@@ -907,7 +925,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-          height: globalSize.setWidthPercentage(60, context),
+            height: globalSize.setWidthPercentage(60, context),
             child: BuildListProductWidget(
               cancelToken: _cancelToken,
               params: {'category_id': id.toString()},
@@ -1257,7 +1275,10 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  _buildCategoriesHome({required BuildContext context1, required double width, required double height}) {
+  _buildCategoriesHome(
+      {required BuildContext context1,
+      required double width,
+      required double height}) {
     return BlocListener<CategoryBloc, CategoryState>(
       bloc: _categoriesBloc,
       listener: (BuildContext context, state) async {
