@@ -12,6 +12,7 @@ import 'package:ojos_app/core/constants.dart';
 import 'package:ojos_app/core/entities/category_entity.dart';
 import 'package:ojos_app/core/errors/connection_error.dart';
 import 'package:ojos_app/core/localization/translations.dart';
+import 'package:ojos_app/core/pusher.dart';
 import 'package:ojos_app/core/res/app_assets.dart';
 import 'package:ojos_app/core/res/edge_margin.dart';
 import 'package:ojos_app/core/res/global_color.dart';
@@ -53,6 +54,7 @@ import 'package:ojos_app/features/search/presentation/pages/search_page.dart';
 import 'package:ojos_app/features/section/presentation/blocs/section_home_bloc.dart';
 import 'package:ojos_app/features/user_management/domain/repositories/user_repository.dart';
 import 'package:ojos_app/features/user_management/presentation/pages/sign_in_page.dart';
+import 'package:ojos_app/screens/categories/view.dart';
 //import 'package:residemenu/residemenu.dart' as Rs;
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -172,13 +174,23 @@ class _HomePageState extends State<HomePage> {
         );
 
     double width = globalSize.setWidthPercentage(100, context);
-    double height = globalSize.setHeightPercentage(100, context) - appBar().preferredSize.height -
+    double height = globalSize.setHeightPercentage(100, context) -
+        appBar().preferredSize.height -
         MediaQuery.of(context).viewPadding.top;
 
     return BlocBuilder<ApplicationBloc, ApplicationState>(
         bloc: BlocProvider.of<ApplicationBloc>(context),
         builder: (context, state) {
           return Scaffold(
+              floatingActionButton: IconButton(
+                icon: Icon(
+                  Icons.category,
+                  size: 30,
+                ),
+                onPressed: () {
+                  push(CategoriesView());
+                },
+              ),
               backgroundColor: globalColor.scaffoldBackGroundGreyColor,
               appBar: appBar(height: height, state: state),
               body: Container(
@@ -586,7 +598,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                       RaisedButton(
                         onPressed: () {
-                          _offerBloc.add(SetupOfferEvent(cancelToken: _cancelToken));
+                          _offerBloc
+                              .add(SetupOfferEvent(cancelToken: _cancelToken));
                         },
                         elevation: 1.0,
                         child: Text(Translations.of(context).translate('retry'),
