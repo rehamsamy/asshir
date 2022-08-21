@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:ojos_app/features/product/presentation/pages/lenses_details_page.dart';
+import 'package:ojos_app/injection_container.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import 'core/datasources/concrete_core_remote_data_source.dart';
@@ -120,6 +121,7 @@ void main() async {
   //   FlutterError.dumpErrorToConsole(details);
   //   log(details.stack?.toString() ?? 'null stack');
   // };
+  initKiwi();
 
   String lang = await _getLanguage();
 

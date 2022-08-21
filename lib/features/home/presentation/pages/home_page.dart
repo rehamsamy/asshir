@@ -172,8 +172,7 @@ class _HomePageState extends State<HomePage> {
         );
 
     double width = globalSize.setWidthPercentage(100, context);
-    double height = globalSize.setHeightPercentage(100, context) -
-        appBar().preferredSize.height -
+    double height = globalSize.setHeightPercentage(100, context) - appBar().preferredSize.height -
         MediaQuery.of(context).viewPadding.top;
 
     return BlocBuilder<ApplicationBloc, ApplicationState>(
@@ -587,8 +586,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       RaisedButton(
                         onPressed: () {
-                          _offerBloc
-                              .add(SetupOfferEvent(cancelToken: _cancelToken));
+                          _offerBloc.add(SetupOfferEvent(cancelToken: _cancelToken));
                         },
                         elevation: 1.0,
                         child: Text(Translations.of(context).translate('retry'),
