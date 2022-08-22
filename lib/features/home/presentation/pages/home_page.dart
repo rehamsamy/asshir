@@ -182,15 +182,15 @@ class _HomePageState extends State<HomePage> {
         bloc: BlocProvider.of<ApplicationBloc>(context),
         builder: (context, state) {
           return Scaffold(
-              floatingActionButton: IconButton(
-                icon: Icon(
-                  Icons.category,
-                  size: 30,
-                ),
-                onPressed: () {
-                  push(CategoriesView());
-                },
-              ),
+              // floatingActionButton: IconButton(
+              //   icon: Icon(
+              //     Icons.category,
+              //     size: 30,
+              //   ),
+              //   onPressed: () {
+              //     push(CategoriesView());
+              //   },
+              // ),
               backgroundColor: globalColor.scaffoldBackGroundGreyColor,
               appBar: appBar(height: height, state: state),
               body: Container(

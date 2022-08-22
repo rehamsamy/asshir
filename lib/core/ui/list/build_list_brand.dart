@@ -40,7 +40,8 @@ class _BuildListCategoryWidgetState extends State<BuildListBrandWidget>
     super.build(context);
     double widthC = globalSize.setWidthPercentage(100, context);
     double heightC = globalSize.setHeightPercentage(100, context);
-
+// print("-=-=--=-= brand data is ${widget.cancelToken.requestOptions}");
+// print("-=-=--=-= brand params is${widget.params.toString()}");
     return Container(
       width: widthC,
       height: heightC,
@@ -90,8 +91,7 @@ class _BuildListCategoryWidgetState extends State<BuildListBrandWidget>
                     crossAxisSpacing: 1,
                     mainAxisSpacing: 1,
                     childAspectRatio:
-                        globalSize.setWidthPercentage(40, context) /
-                            globalSize.setWidthPercentage(40, context),
+                    globalSize.setWidthPercentage(40, context) / globalSize.setWidthPercentage(40, context),
                   ),
               itemBuilder: (BuildContext context, int index) {
                 return Container(

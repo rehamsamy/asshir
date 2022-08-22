@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-
 import '../errors/bad_request_error.dart';
 import '../errors/base_error.dart';
 import '../errors/cancel_error.dart';

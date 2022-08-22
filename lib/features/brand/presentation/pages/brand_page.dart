@@ -60,8 +60,7 @@ class _BrandPageState extends State<BrandPage> {
             crossAxisCount: 3,
             crossAxisSpacing: 1,
             mainAxisSpacing: 1,
-            childAspectRatio: globalSize.setWidthPercentage(28, context) /
-                globalSize.setWidthPercentage(40, context),
+            childAspectRatio: globalSize.setWidthPercentage(28, context) / globalSize.setWidthPercentage(40, context),
           ),
         )));
   }

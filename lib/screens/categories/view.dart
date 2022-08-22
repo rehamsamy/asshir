@@ -33,7 +33,7 @@ class _CategoriesViewState extends State<CategoriesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         title: Text("categories"),
+         title: Text("categories",style: TextStyle(color: Colors.black),),
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
