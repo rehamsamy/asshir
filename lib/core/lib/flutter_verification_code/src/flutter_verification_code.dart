@@ -76,7 +76,7 @@ class _VerificationCodeState extends State<VerificationCode> {
       controller: _listControllerText[index],
       focusNode: _listFocusNode[index],
       showCursor: true,
-      maxLengthEnforced: true,
+     // maxLengthEnforced: true,
       autocorrect: false,
       textAlign: TextAlign.center,
       autofocus: widget.autofocus,

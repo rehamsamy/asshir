@@ -135,7 +135,7 @@ class _MainRootPageState extends State<MainRootPage> with SingleTickerProviderSt
                 child: Material(
                   color: Colors.transparent,
                   child: Stack(
-                    overflow: Overflow.visible,
+                    //overflow: Overflow.visible,
                     children: <Widget>[
                       Container(
                         padding: const EdgeInsets.only(left: 05.0, right: 5.0, bottom: 5.0),
